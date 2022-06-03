@@ -1,0 +1,53 @@
+.kanban {
+	display: flex;
+	align-items: flex-start;
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	&__section {
+		width: 400px;
+		background-color: #929292cb;
+		padding: 10px;
+		border-radius: 20px;
+		margin-bottom: 2rem;
+
+		& ~ & {
+			margin-left: 10px;
+		}
+
+		&__title {
+			font-size: 1.2rem;
+			font-weight: 700;
+			color: rgb(255, 255, 255);
+			margin: 10px 0 20px;
+		}
+
+		&__content {
+			& > * ~ * {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #63bf90 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	display: hidden;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #63bf90;
+	border-radius: 10px;
+	border: 0px solid #ffffff;
+}
